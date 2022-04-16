@@ -31,7 +31,5 @@ jobs:
         MONGO_ATLAS_PASSWORD: ${{ secrets.MONGO_ATLAS_PASSWORD }}
         MONGO_ATLAS_DB: ${{ secrets.MONGO_ATLAS_DB }}
       with:
-        context: .
-        file: Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_NAME }}/nest-be:tag$(date +%s)
+        tags: ${{ secrets.DOCKER_HUB_NAME }}/nest-be:latest
